@@ -1,4 +1,5 @@
 import SectionHeading from "./SectionHeading";
+import { siteConfig } from "@/data/site";
 
 export default function About() {
   return (
@@ -8,7 +9,7 @@ export default function About() {
         <div className="about-copy">
           <p>
             I&apos;m an Information Systems graduate and software developer based in
-            Addis Ababa. I enjoy turning ideas into working products and building
+            {" "}{siteConfig.location.split(",")[0]}. I enjoy turning ideas into working products and building
             practical applications that solve real-world problems.
           </p>
           <p>
@@ -17,6 +18,23 @@ export default function About() {
             understanding how the pieces fit together, solving problems along the
             way, and learning new technologies as I build.
           </p>
+        </div>
+        <div className="about-facts">
+          <article className="fact-card glass-card">
+            <span>Education</span>
+            <strong>Information Systems</strong>
+            <p>Bahir Dar University · Bahir Dar Institute of Technology</p>
+          </article>
+          <article className="fact-card glass-card">
+            <span>Focus</span>
+            <strong>Web &amp; Backend Development</strong>
+            <p>Full-stack products with practical value</p>
+          </article>
+          <article className="fact-card glass-card">
+            <span>Location</span>
+            <strong>{siteConfig.location}</strong>
+            <p>Open to meaningful opportunities</p>
+          </article>
         </div>
       </div>
       <div className="about-note">

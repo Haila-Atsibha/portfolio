@@ -4,8 +4,10 @@ export type Project = {
   technologies: string[];
   features: string[];
   href?: string;
+  githubHref?: string;
   status?: string;
   featured?: boolean;
+  preview: "quickserve" | "exitprep" | "store";
 };
 
 export const projects: Project[] = [
@@ -19,7 +21,8 @@ export const projects: Project[] = [
       "Express.js",
       "PostgreSQL",
       "Supabase",
-      "Chapa",
+      "JWT",
+      "AI-powered identity verification",
     ],
     features: [
       "Customer discovery and booking with provider service management",
@@ -27,7 +30,9 @@ export const projects: Project[] = [
       "Secure chat, ID/selfie verification, OTP/email, and subscriptions",
     ],
     href: "https://quickservehbm.vercel.app",
+    githubHref: "https://github.com/Haila-Atsibha",
     featured: true,
+    preview: "quickserve",
   },
   {
     name: "Exit Prep",
@@ -40,6 +45,8 @@ export const projects: Project[] = [
       "Admin tools for managing educational resources",
     ],
     href: "https://pjexitprep.vercel.app",
+    githubHref: "https://github.com/Haila-Atsibha",
+    preview: "exitprep",
   },
   {
     name: "Liya's Store",
@@ -51,5 +58,7 @@ export const projects: Project[] = [
       "Admin functionality and delivery personnel management",
     ],
     href: "https://liyadaniel.vercel.app",
+    githubHref: "https://github.com/Haila-Atsibha",
+    preview: "store",
   },
 ];

@@ -13,6 +13,7 @@ export default function Skills() {
         {skillGroups.map((group, index) => (
           <article className="skill-group" key={group.title}>
             <div className="skill-group-head">
+              <span className="skill-icon" aria-hidden="true">{group.icon}</span>
               <span className="skill-index">0{index + 1}</span>
               <h3>{group.title}</h3>
             </div>

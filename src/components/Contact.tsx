@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { siteConfig } from "@/data/site";
-import { ArrowUpRight, GithubIcon, MailIcon, TelegramIcon } from "./Icons";
+import { ArrowUpRight, GithubIcon, LinkedinIcon, MailIcon } from "./Icons";
 
 export default function Contact() {
   const [notice, setNotice] = useState("");
@@ -31,10 +31,10 @@ export default function Contact() {
       <div className="section-wrap contact-wrap">
         <div className="contact-intro">
           <p className="eyebrow">Get in touch</p>
-          <h2>Let&apos;s build<br />something together.</h2>
+          <h2>Let&apos;s Build Something</h2>
           <p className="contact-description">
-            I&apos;m open to software development opportunities, internships, and
-            projects where I can learn, contribute, and build useful products.
+            I&apos;m open to software development opportunities, collaborations,
+            and interesting projects.
           </p>
           <div className="contact-links">
             {siteConfig.email && (
@@ -43,17 +43,17 @@ export default function Contact() {
             {siteConfig.githubUrl && (
               <a href={siteConfig.githubUrl} target="_blank" rel="noreferrer"><GithubIcon /> GitHub <ArrowUpRight /></a>
             )}
-            {siteConfig.telegramUrl && (
-              <a href={siteConfig.telegramUrl} target="_blank" rel="noreferrer"><TelegramIcon /> Telegram <ArrowUpRight /></a>
+            {siteConfig.linkedinUrl && (
+              <a href={siteConfig.linkedinUrl} target="_blank" rel="noreferrer"><LinkedinIcon /> LinkedIn <ArrowUpRight /></a>
             )}
-            {!siteConfig.email && !siteConfig.githubUrl && !siteConfig.telegramUrl && (
-              <p className="contact-setup-note">Add your email and profile links in <code>src/data/site.ts</code> to display them here.</p>
+            {!siteConfig.email && !siteConfig.githubUrl && !siteConfig.linkedinUrl && (
+              <p className="contact-setup-note">Add your contact links in <code>src/data/site.ts</code> to display them here.</p>
             )}
           </div>
         </div>
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="form-heading">
-            <span>Send a message</span>
+            <span>Start a conversation</span>
             <span className="form-step">01 — 03</span>
           </div>
           <label htmlFor="contact-name">Your name</label>

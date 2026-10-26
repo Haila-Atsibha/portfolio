@@ -1,18 +1,22 @@
 export const skillGroups = [
   {
     title: "Frontend",
-    skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"],
+    icon: "</>",
+    skills: ["JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS"],
   },
   {
     title: "Backend",
-    skills: ["Node.js", "Express.js", "REST APIs", "Authentication", "Role-based access control"],
+    icon: "{}",
+    skills: ["Node.js", "Express.js", "REST APIs", "Authentication"],
   },
   {
     title: "Database",
-    skills: ["PostgreSQL", "Supabase", "MongoDB"],
+    icon: "DB",
+    skills: ["PostgreSQL", "Supabase"],
   },
   {
-    title: "Tools & Technologies",
+    title: "Tools",
+    icon: "↗",
     skills: ["Git", "GitHub"],
   },
 ];

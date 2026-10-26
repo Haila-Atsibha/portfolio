@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { siteConfig } from "@/data/site";
 import { MenuIcon, XIcon } from "./Icons";
 
 const links = [
+  ["Home", "#home"],
   ["About", "#about"],
   ["Skills", "#skills"],
   ["Projects", "#projects"],
@@ -14,9 +15,17 @@ const links = [
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const updateScrollState = () => setIsScrolled(window.scrollY > 12);
+    updateScrollState();
+    window.addEventListener("scroll", updateScrollState, { passive: true });
+    return () => window.removeEventListener("scroll", updateScrollState);
+  }, []);
 
   return (
-    <header className="site-header">
+    <header className={`site-header${isScrolled ? " is-scrolled" : ""}`}>
       <nav className="nav-shell" aria-label="Main navigation">
         <a
           className="wordmark"

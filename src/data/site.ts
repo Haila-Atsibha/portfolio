@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: "HaileIyesus Mulat",
   shortName: "HaileIyesus",
-  location: "Addis Ababa, Ethiopia",
-  role: "Software Developer",
+  location: "Bahir Dar, Ethiopia",
+  role: "Information Systems Graduate & Software Developer",
   email: "haileiyesusmulat@gmail.com",
   githubUrl: "https://github.com/Haila-Atsibha",
-  telegramUrl: "https://t.me/HMA133",
+  linkedinUrl: "",
 };

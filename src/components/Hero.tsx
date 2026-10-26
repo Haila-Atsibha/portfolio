@@ -1,26 +1,26 @@
 import { siteConfig } from "@/data/site";
-import { ArrowRight, ArrowUpRight, CodeIcon, GithubIcon, TelegramIcon } from "./Icons";
+import { ArrowRight, ArrowUpRight, CodeIcon, GithubIcon } from "./Icons";
 
 export default function Hero() {
   return (
     <section className="hero section-wrap" id="home" aria-labelledby="hero-title">
       <div className="hero-copy">
-        <p className="availability"><span /> Information Systems Graduate <span className="availability-divider">·</span> {siteConfig.location}</p>
+        <p className="availability"><span /> Open to software opportunities <span aria-hidden="true">·</span> {siteConfig.location}</p>
         <h1 id="hero-title">
-          Hi, I&apos;m <span>HaileIyesus.</span>
-          <br />
-          I build for the web.
+          Hi, I&apos;m
+          <span>{siteConfig.name}</span>
         </h1>
+        <p className="hero-role">Information Systems Graduate &amp; Software Developer</p>
         <p className="hero-lede">
-          I build practical web applications with modern technologies, focusing on
-          clean user experiences, reliable backend systems, and real-world solutions.
+          Information Systems graduate focused on building modern web applications,
+          backend systems, and practical digital solutions.
         </p>
         <div className="hero-actions">
           <a className="button button-primary" href="#projects">
-            View my work <ArrowRight />
+            View My Projects <ArrowRight />
           </a>
-          <a className="button button-text" href="#contact">
-            Get in touch <ArrowUpRight />
+          <a className="button button-outline" href="#contact">
+            Contact Me <ArrowUpRight />
           </a>
         </div>
         <div className="hero-socials" aria-label="Social profiles">
@@ -29,20 +29,16 @@ export default function Hero() {
               <GithubIcon /> <span>GitHub</span> <ArrowUpRight />
             </a>
           )}
-          {siteConfig.telegramUrl && (
-            <a href={siteConfig.telegramUrl} target="_blank" rel="noreferrer" aria-label="Telegram profile">
-              <TelegramIcon /> <span>Telegram</span> <ArrowUpRight />
-            </a>
-          )}
         </div>
       </div>
-      <div className="hero-art" aria-label="Decorative code editor illustration" role="img">
+      <div className="hero-art" aria-label="Developer profile visual">
+        <div className="hero-glow" aria-hidden="true" />
         <div className="orbit orbit-one" />
         <div className="orbit orbit-two" />
-        <div className="editor-window">
+        <div className="profile-card">
           <div className="editor-top">
             <div className="window-dots"><i /><i /><i /></div>
-            <span>hello-world.ts</span>
+            <span>haileiyesus.ts</span>
             <CodeIcon />
           </div>
           <div className="editor-code" aria-hidden="true">
@@ -54,9 +50,15 @@ export default function Hero() {
             <div><span className="line-no">06</span>{"};"}</div>
             <div className="editor-cursor"><span className="line-no">07</span><span /></div>
           </div>
+          <div className="profile-card-footer">
+            <div className="profile-identity">
+              <strong>{siteConfig.name}</strong>
+              <span>{siteConfig.role}</span>
+            </div>
+            <span className="profile-availability"><span /> Building</span>
+          </div>
         </div>
-        <div className="art-label"><span /> Always learning, always building</div>
-        <div className="art-mark" aria-hidden="true">&lt;/&gt;</div>
+        <div className="art-label"><span /> Thoughtful code. Useful products.</div>
       </div>
       <a className="scroll-cue" href="#about"><span /> Scroll to explore</a>
     </section>
